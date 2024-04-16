@@ -1,0 +1,17 @@
+.list-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-4);
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+li > img {
+    max-width: 120px;
+    margin-bottom: var(--spacing);
+    & + * {
+        margin-top: 0;
+    }
+}

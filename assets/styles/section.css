@@ -1,0 +1,29 @@
+section {
+  padding-top: var(--spacing-2);
+  padding-bottom: var(--spacing-2);
+}
+
+section:not(:first-child) {
+  margin-top: var(--spacing-2);
+}
+
+.featured-posts {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: var(--spacing-3);
+  & hgroup {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (width > 575px) {
+  .featured-posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (width > 991px) {
+  .featured-posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

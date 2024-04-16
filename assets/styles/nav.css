@@ -1,0 +1,44 @@
+nav {
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--main-color-inverse);
+    padding: 1rem;
+}
+
+@media screen and (width > 1200px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    z-index: 2;
+    white-space: nowrap;
+}   
+
+nav a {
+    --outline-color: var(--main-color-inverse);
+    display: block;
+    padding: var(--spacing);
+    color: var(--main-color-inverse);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+nav > a {
+    font-size: 2rem;
+    font-weight: bold;
+}

@@ -1,0 +1,35 @@
+search {
+    max-width: 100%;
+    @media screen and (width > 1200px){
+        width: 60ch;
+    }
+}
+
+input {
+    padding: var(--spacing) var(--spacing-2);
+    margin-bottom: var(--spacing);
+    width: 100%;
+    background-color: var(--grey);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+input[type="search"] {
+    padding-left: var(--spacing-4);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+    background-position: center left var(--spacing);
+    background-size: 1rem auto;
+    background-repeat: no-repeat;
+}
+
+button {
+    padding: var(--spacing) var(--spacing-2);
+    background-color: var(--main-color);
+    color: var(--main-color-inverse);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+}

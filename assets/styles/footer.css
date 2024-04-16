@@ -1,0 +1,12 @@
+footer {
+    padding: var(--spacing);
+    background-color: var(--main-color);
+    color: var(--main-color-inverse);
+    text-align: center;
+    font-size: .875rem;
+    & a {
+        --outline-color: var(--main-color-inverse);
+        color: var(--main-color-inverse);
+        text-decoration: underline;
+    }
+}

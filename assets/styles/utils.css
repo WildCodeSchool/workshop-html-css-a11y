@@ -1,0 +1,15 @@
+.full-bleed {
+    grid-column: 1 / -1;
+    margin-left: calc(var(--spacing) * -1);
+    margin-right: calc(var(--spacing) * -1);
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+}
+
+.bg-100 {
+    background-color: var(--main-color-light);   
+}
+
+.text-center {
+    text-align: center;
+}

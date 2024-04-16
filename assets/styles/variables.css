@@ -1,0 +1,18 @@
+:root {
+    --main-color: #6f75c2;
+    --main-color-inverse: #fff;
+    --main-color-light: color-mix(in srgb, var(--main-color) 10%, white 90%);
+
+    --dark: #323230;
+    --grey: #eeeeee;
+
+    --spacing: .5rem;
+    --spacing-2: calc(2 * var(--spacing));
+    --spacing-3: calc(3 * var(--spacing));
+    --spacing-4: calc(4 * var(--spacing));
+
+    --border-radius: 1rem;
+    --border-radius-sm: calc(var(--border-radius) / 3);
+
+    --outline-color: var(--dark);
+}
