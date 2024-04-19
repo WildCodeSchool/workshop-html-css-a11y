@@ -1,4 +1,5 @@
 nav {
+    --outline-color: var(--main-color-inverse);
     font-family: Montserrat, sans-serif;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,6 @@ nav ul {
 }   
 
 nav a {
-    --outline-color: var(--main-color-inverse);
     display: block;
     padding: var(--spacing);
     color: var(--main-color-inverse);

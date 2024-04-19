@@ -1,2 +1,0 @@
-# Workshop A11Y
-

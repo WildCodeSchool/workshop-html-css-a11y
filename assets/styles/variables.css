@@ -1,5 +1,5 @@
 :root {
-    --main-color: #6f75c2;
+    --main-color: #8084C2;
     --main-color-inverse: #fff;
     --main-color-light: color-mix(in srgb, var(--main-color) 10%, white 90%);
 
