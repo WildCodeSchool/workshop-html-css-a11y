@@ -111,7 +111,7 @@ N'hésite pas à suivre ces liens, on y apprend notamment que respecter la hiér
 Terminons l'onglet des alertes et regardons celles liées aux contextes des liens.
 ![](./images/wave-suspicious-links.png)
 
-Ces alertes concernent les liens « *Read more* » des articles. L'extension nous alerte sur l'ambiguité des textes de ces liens qui pourrait générer de la confusion pour les utilisateurs se servant de lecteurs d'écran. En effet, que va t-il se passser lorsqu'un assistant d'écran lira un de ces liens ?  
+Ces alertes concernent les liens « *Read more* » des articles. L'extension nous alerte sur l'ambiguité des textes de ces liens qui pourrait générer de la confusion pour les utilisateurs se servant de lecteurs d'écran. En effet, que va t-il se passer lorsqu'un assistant d'écran lira un de ces liens ?  
 « **Lire la suite** ». La suite de quoi ? 
 
 Pour mieux comprendre, voici une capture écran de l'assistant **VoiceOver** de MacOS. Ce type d'outil permet de consulter la liste des liens pour naviguer sur la page plus rapidement. On y retrouve nos trois liens « *Read more* » perdus dans la liste.
@@ -211,7 +211,7 @@ Toutes les erreurs et mises en garde relevées par l'extension de **WebAIM** ont
 ### 🔬 Expérience
 
 Positionne le pointeur de ta souris dans la barre d'adresse de ton navigateur. Maintenant, sans utiliser la souris, essaie de naviguer sur la page. Le seul moyen pour y arriver est d'utiliser la touche tabulation <kbd>TAB</kbd> du clavier. C'est ce que feront les personnes se servant d'assistant à la navigation.  
-Que constate-tu ?  
+Que constates-tu ?  
 Il est impossible de savoir quel élément est sélectionné.  
 Que s'est-il passé ?  
 Une pratique d'intégration, malheureusement récurrente sur un grand nombre d'interfaces, consiste à désactiver l'affichage des bords d'un élément lorsqu'il reçoit le focus au clic de souris au motif d'un choix esthétique. Cela a pour effet de le désactiver également pour la tabulation.
