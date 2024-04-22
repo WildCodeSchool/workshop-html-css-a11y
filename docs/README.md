@@ -34,7 +34,7 @@ Installe cette extension pour ton navigateur.
 - [Wave pour Chrome](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) (ou tout navigateur basé sur Chromium), 
 - [Wave pour Firefox](https://addons.mozilla.org/fr/firefox/addon/wave-accessibility-tool/)
 
-Il faudra ensuite que tu autorises l'accès aux URL de fichier dans les réglages de l'extension.
+Tu dois ensuite autoriser l'accès aux URL de fichier dans les réglages de l'extension.
 ![](./images/wave-setting.png)  
 
 Lorsque tu actives l'extension sur la page `index.html`, tu dois voir quelque chose comme ceci :
@@ -42,7 +42,7 @@ Lorsque tu actives l'extension sur la page `index.html`, tu dois voir quelque ch
 ![](./images/wave-all-errors.png)
 
 
-« _…à première vue cette page semble tout à fait fonctionnelle._ » Pas si sûr 🙄.   
+« _[…] à première vue cette page semble tout à fait fonctionnelle._ » Pas si sûr 🙄.   
 Corrigeons cela.
 
 
@@ -72,7 +72,7 @@ Tu peux aussi effectuer une recherche sur une palette de couleurs plus large si 
 
 ![](./images/contrast-finder.png)
 
-Une série de couleur t'est proposée en cliquant sur le bouton « *Trouver des couleurs valides* ». 
+Tu peux voir des propositions de couleurs en cliquant sur le bouton « *Trouver des couleurs valides* ». 
 
 ![](./images/contrast-finder-new-colors.png)
 
@@ -92,7 +92,7 @@ En consultant l'onglet _Reference_ de l'extension, tu découvres cette fois qu'i
 - [2.4.1 Bypass Blocks (Level A)](https://www.w3.org/TR/WCAG22/#bypass-blocks)
 - [2.4.6 Headings and Labels (Level AA)](https://www.w3.org/TR/WCAG22/#headings-and-labels)  
   
-N'hésite pas à suivre ces liens. On y apprend notamment que respecter la hiérarchie des intertitres (`<h1>` à `<h6>`) permet aux lecteurs d'écran de présenter correctement les contenus aux utilisateurs et leur offre la possibilité de naviguer au clavier de section en section au sein d'une même page grâce à des intertitres explicites.
+N'hésite pas à suivre ces liens. Tu peux y apprendre notamment que respecter la hiérarchie des intertitres (`<h1>` à `<h6>`) permet aux lecteurs d'écran de présenter correctement les contenus aux utilisateurs et leur offre la possibilité de naviguer au clavier de section en section au sein d'une même page grâce à des intertitres explicites.
 
 > **🎯 À toi de jouer**  
 >Modifie le fichier `index.html` de sorte à respecter l'ordre des intertitres `<h1>`, `<h2>`, `<h3>`, etc.
