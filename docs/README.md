@@ -34,7 +34,7 @@ Installe cette extension pour ton navigateur.
 - [Wave pour Chrome](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) (ou tout navigateur basé sur Chromium), 
 - [Wave pour Firefox](https://addons.mozilla.org/fr/firefox/addon/wave-accessibility-tool/)
 
-Il faudra autoriser l'accès aux URL de fichier dans les réglages de l'extension.
+Tu dois ensuite autoriser l'accès aux URL de fichier dans les réglages de l'extension.
 ![](./images/wave-setting.png)  
 
 Lorsque tu actives l'extension sur la page `index.html`, tu dois voir quelque chose comme ceci :
@@ -42,13 +42,13 @@ Lorsque tu actives l'extension sur la page `index.html`, tu dois voir quelque ch
 ![](./images/wave-all-errors.png)
 
 
-« _à première vue cette page semble tout à fait fonctionnelle_ ». Pas si sûr 🙄.   
+« _[…] à première vue cette page semble tout à fait fonctionnelle._ » Pas si sûr 🙄.   
 Corrigeons cela.
 
 
 ## 🚫 Contraste des couleurs
 
-Commençons par les erreurs liées aux contrastes des couleurs. Il semble y en avoir beaucoup mais nous allons pouvoir toutes les corriger d'un seul coup.
+Commençons par les erreurs liées aux contrastes des couleurs. Il semble y en avoir beaucoup mais nous allons pouvoir les corriger toutes d'un seul coup.
 
 L'onglet _Details_ de l'extension **Wave** liste l'ensemble des erreurs triées par catégories.
 
@@ -60,7 +60,7 @@ En cliquant sur la petite icône <i class="bi bi-info-circle-fill"></i>, l'ongle
 ![](./images/wave-reference.png)
 {: .text-center :}
 
-Ici, il s'agit du point [1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=143#contrast-minimum) qui préconise de «&nbsp;*Veiller à ce qu'un **rapport de contraste d'au moins 4,5:1** existe entre le texte (et les images du texte) et l'arrière-plan derrière le texte*.&nbsp;»  
+Ici, il s'agit du point [1.4.3 Contrast (Minimum) - Level AA](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=143#contrast-minimum) qui préconise de «&nbsp;*veiller à ce qu'un **rapport de contraste d'au moins 4,5:1** existe entre le texte (et les images du texte) et l'arrière-plan derrière le texte*.&nbsp;»  
 
 Le but de cette règle est d'assurer une parfaite lisibilité des contenus pour les utilisateurs souffrant de troubles visuels. Un utilisateur en situation d'exposition à une forte intensité lumineuse pourrait également être concerné par cette règle (par&nbsp;exemple&nbsp;:&nbsp;consulter un site sur smartphone en extérieur très ensoleillé).
 
@@ -72,7 +72,7 @@ Tu peux aussi effectuer une recherche sur une palette de couleurs plus large si 
 
 ![](./images/contrast-finder.png)
 
-Une série de couleur t'est proposée en cliquant sur le bouton « *Trouver des couleurs valides* » 
+Tu peux voir des propositions de couleurs en cliquant sur le bouton « *Trouver des couleurs valides* ». 
 
 ![](./images/contrast-finder-new-colors.png)
 
@@ -92,7 +92,7 @@ En consultant l'onglet _Reference_ de l'extension, tu découvres cette fois qu'i
 - [2.4.1 Bypass Blocks (Level A)](https://www.w3.org/TR/WCAG22/#bypass-blocks)
 - [2.4.6 Headings and Labels (Level AA)](https://www.w3.org/TR/WCAG22/#headings-and-labels)  
   
-N'hésite pas à suivre ces liens, on y apprend notamment que respecter la hiérarchie des intertitres (`<h1>` à `<h6>`) permet aux lecteurs d'écran de présenter correctement les contenus aux utilisateurs et leur offre la possibilité de naviguer au clavier de section en section au sein d'une même page grâce à des intertitres explicites.
+N'hésite pas à suivre ces liens. Tu peux y apprendre notamment que respecter la hiérarchie des intertitres (`<h1>` à `<h6>`) permet aux lecteurs d'écran de présenter correctement les contenus aux utilisateurs et leur offre la possibilité de naviguer au clavier de section en section au sein d'une même page grâce à des intertitres explicites.
 
 > **🎯 À toi de jouer**  
 >Modifie le fichier `index.html` de sorte à respecter l'ordre des intertitres `<h1>`, `<h2>`, `<h3>`, etc.
@@ -122,12 +122,12 @@ Ce problème est identifié dans le référenctiel **WCAG** au point **2.4.4 Lin
 >[2.4.4 Link Purpose (In Context) - Level A](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=244#link-purpose-in-context)  
 >*L'objectif de chaque lien peut être déterminé à partir du texte du lien seul ou du texte du lien avec son contexte déterminé par programmation*.
 
-Plusieurs solutions peuvent être envisagées.
-Dans notre cas, nous ne souhaitons pas modifier le texte du lien (*Read more*). Il est cependant possible de l'associer à un autre élément de la page, au titre du même article par exemple.  
+Plusieurs solutions peuvent être envisagées.  
+Dans le cas présent, tu ne souhaites pas modifier le texte du lien (*Read more*). Il est cependant possible de l'associer à un autre élément de la page, au titre du même article par exemple.  
 C'est une des solutions qui est proposée en utilisant l'attribut `aria-labelledby` [https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA7.html](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA7.html).  
 
 🎯 **Voici comment procéder**.  
-Ajoute un `id` à chaque lien et chaque titre d'article, puis associe-les grâce à l'attribut `aria-labelledby` comme ceci par exemple :
+Ajoute un `id` à chaque lien et chaque titre d'article, puis associe-les grâce à l'attribut `aria-labelledby` en indiquant les deux valeurs séparées par un espace. Comme ceci par exemple :
 
 ```html
 <article>
@@ -151,7 +151,7 @@ La capture suivante nous montre à présent que l'assistant d'écran concatène 
 
 ![](./images/voice-over-liens-2.png)
 
-L'autre intérêt de cette technique est son côté programmatique. Les textes des titres peuvent changer sans risque au gré des publications et sans devoir mettre à jour un attribut, dès lors qu'ils restent compréhensibles bien entendu.  
+L'autre intérêt de cette technique est son approche programmatique. Les textes des titres peuvent changer sans risque au gré des publications et sans devoir mettre à jour un attribut, dès lors qu'ils restent compréhensibles bien entendu.  
 
 Si tu utilises un langage de programation pour composer ce type de section où des articles sont agrégés (à l'aide d'une boucle en **JavaScript** ou **PHP** par exemple), il est très facile de générer ces attributs `id` et `aria-labelledby` en utilisant un identifiant unique, un [slug](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#slugs) ou toute autre technique de ton choix. 
 {: .alert-info :}
@@ -176,7 +176,7 @@ Revenons à présent sur les autres erreurs indiquées par l'extension **Wave**.
 >   - Pour les avatars des membres de l'équipe, tu peux utiliser la technique du `aria-labelledby` vue précédemment en reliant les images aux titres `<h3>`. Tu peux aussi simplement ajouter un attribut `alt` pour indiquer le contenu alternatif de l'image. Ce sera d'ailleurs une bonne pratique SEO.  
 >Par exemple :
 >       ```html
->     <img src="images/team/eloisa-pintz.png" alt="Picture of Eloisa Pintz">
+>     <img src="images/team/eloisa-pintz.png" alt="Eloisa Pintz">
 >       ```
 >       [https://www.w3.org/WAI/WCAG22/Techniques/html/H37.html](https://www.w3.org/WAI/WCAG22/Techniques/html/H37.html)
 >   - Procède de même pour les images des articles, sauf si tu estimes que ces images ont un rôle uniquement décoratif, auquel cas il faut se contenter d'ajouter l'attribut `alt` mais de le laisser vide pour que ce contenu soit ignorer des assistants  d'écran.
@@ -187,7 +187,8 @@ Revenons à présent sur les autres erreurs indiquées par l'extension **Wave**.
 >       **À noter** : cette technique du `alt` vide doit être appliquée à toute image décorative appartenant au webdesign.
 >       [https://www.w3.org/WAI/tutorials/images/decorative/](https://www.w3.org/WAI/tutorials/images/decorative/)
 > - L'erreur *Missing form label* concerne le champ texte du formulaire de recherche auquel aucune étiquette n'est associée.  
-> **Associer un label à un champ de formulaire est primordiale** pour l'ensemble des utilisateurs et l'emploi de l'attribut `placeholder` ne suffit pas car il n'est pas pris en compte par les lecteurs d'écran. Il y a cependant des cas d'usage où le webdesign ne prévoit pas de label. C'est le cas de ce mini formulaire de recherche. Comme expliqué sur ce tutoriel, [https://www.w3.org/WAI/tutorials/forms/labels/#using-aria-label](https://www.w3.org/WAI/tutorials/forms/labels/#using-aria-label), tu peux utiliser l'attribut `aria-label` puisque le champ est utilisé conjointement avec un bouton au texte explicite.
+> **Associer un label à un champ de formulaire est primordiale** pour l'ensemble des utilisateurs et l'emploi de l'attribut `placeholder` ne suffit pas car il n'est pas pris en compte par les lecteurs d'écran. **Il faudrait donc ici ajouter un label**.  
+> Il y a cependant des cas d'usage où le webdesign ne prévoit pas de label. C'est le cas de ce mini formulaire de recherche. Comme expliqué sur ce tutoriel, [https://www.w3.org/WAI/tutorials/forms/labels/#using-aria-label](https://www.w3.org/WAI/tutorials/forms/labels/#using-aria-label), tu peux utiliser l'attribut `aria-label` puisque le champ est utilisé conjointement avec un bouton au texte explicite.
 >     ```html
 >   <input type="search" name="search" aria-label="enter your search" placeholder="enter your search" >
 >   <button type="submit">Search</button>
@@ -218,7 +219,7 @@ Une pratique d'intégration, malheureusement récurrente sur un grand nombre d'i
 
 ### 🎯 Correction
 
-Ouvre le fichier `assets > styles > main.css` et supprime le code coupable de cette malfaçon situé en début de fichier ⬇️.
+Ouvre le fichier `assets > styles > main.css` et **supprime le code coupable de cette malfaçon** situé en début de fichier ⬇️.
 ```css
 *:focus {
     outline: none;
@@ -228,7 +229,7 @@ Ouvre le fichier `assets > styles > main.css` et supprime le code coupable de ce
 
 Lorsque tu rafraîchis ton navigateur et recommence l'expérience, cette fois-ci l'indicateur par défaut est visible autour de chaque élément acceptant le focus (liens, bouton, champ de fomulaire…) et tu peux naviguer sur la page.  
 Enfin presque, car selon le webdesign et la palette de couleurs d'une page, il n'est pas toujours facile de distinguer correctement les encadrés des couleurs de fond. 
-Ce point est traité au niveau [2.4.7: Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible) et plusieurs solutions sont proposées.
+Ce point est traité au niveau [2.4.7: Focus Visible](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible) et là encore, plusieurs solutions te sont proposées.
 
 Le CSS de notre page intègre déjà une variable `--outline-color` qui enregistre la couleur noire `#323230` par défaut et blanche `#fff` pour les liens de la barre de navigation (fichier `nav.css`).
 
@@ -242,14 +243,26 @@ Ajoute ceci à ton fichier `main.css` là où tu as supprimé le code précéden
 }
 ```
 
-Les contours sont ainsi rendus plus épais, en pointillé et à distance suffisante des éléments pour pouvoir être identifiés. Par ailleurs, on utilise ici le pseudo sélecteur CSS `:focus-visible` qui, à la différence du `:focus`, concerne uniquement les indicateurs de *focus* liés à la tabulation (en dehors des champs de formulaire). L'interface est ainsi très peu affectée lors des *focus* aux clics de souris.  
+Les contours sont ainsi rendus plus épais, en pointillé et à distance suffisante des éléments pour pouvoir être identifiés. Par ailleurs, tu utilises ici le pseudo sélecteur CSS `:focus-visible` qui, à la différence du `:focus`, concerne uniquement les indicateurs de *focus* liés à la tabulation (en dehors des champs de formulaire). Ton interface est ainsi très peu affectée lors des *focus* aux clics de souris.  
 [Consulte cette ressource](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible#focus_vs_focus-visible) pour en savoir plus à ce sujet. [Cet article sur css-tricks.com](https://css-tricks.com/almanac/selectors/f/focus-visible/) pourra également t'apporter un éclairage complémentaire.
 
-## Outils supplémentaires
+## Aller plus loin
 
+### Screen readers
 Cet atelier intègre des captures écran de **VoiceOver**, l'outil d'accessibilité installé nativement sur MacOS.
 - Si ton ordinateur est un PC sous Windows, il existe l'[assitant libre NVDA](https://www.nvaccess.org/) offrant les mêmes fonctionnalités. 
 - Si ton OS est Ubuntu, tu peux avoir accès à un équivalent avec [Orca screen reader](https://help.ubuntu.com/stable/ubuntu-help/a11y-screen-reader.html.en). 
+
+### WAI-ARIA
+Nous avons évoqué deux attribut, `aria-label` et `aria-labelledby`, qui font partie de la famille des [WAI-ARIA (Accessible Rich Internet Applications)](https://www.w3.org/WAI/standards-guidelines/aria/).  
+En quelques mots (mais cela mériterait beaucoup plus d'explications), les attributs **ARIA** ont pour objectif d'apporter de la fonctionnalité aux lecteurs et assistants d'écran. Il peuvent avoir un emploi statique pour apporter de la précision (comme nous l'avons fait) mais aussi dyamique lorsqu'ils sont manipulés avec JavaScript (indiquer qu'une liste ou un menu a été déplié, une modale ouverte, lire un message d'erreur suite à un traitement asynchrone, etc.). L'étude de ces contenus enrichis devra faire l'objet d'un atelier à part entière notamment avec JavaScript mais tu peux d'ores et déjà consulter cette ressources [https://www.w3.org/TR/wai-aria/](https://www.w3.org/TR/wai-aria/) pour en apprendre davantage.
+
+### 🎁 Skip links
+
+Un dernier exercice 🤓 ?  
+Consulte cette ressource [Accessibility Skip links](https://www.w3schools.com/accessibility/accessibility_skip_links.php) et essaie d'implémenter un _Skip links_ à ta page.  
+
+Cette fonctionnalité s'avère très utile pour accéder rapidemment au contenu principal d'une page dans le cas d'une navigation au clavier et lorsqu'une barre de navigation comporte de nombreux liens.
 
 ## Conclusion
 
@@ -261,7 +274,7 @@ Nous n'avons pas couvert l'ensemble des règles pour rendre une interface web ac
 - Les erreurs liées aux contrastes des couleurs s'anticipent dès l'étape de maquette.
 - Utiliser des variables CSS permet d'adapter rapidemment son code notamment quand il s'agit de corriger des erreurs.
 - Les attributs `aria-labelledby` et `aria-label` peuvent être utilisés lorsqu'il n'y a pas d'alternative HTML évidente pour corriger un défaut d'accessibilité.
-- Tester régulièrement ses pages grâce à des outils dédiés permet de gagner en qualité d'utilisabilité et de lutter contre les dysfonctionnements.
+- Tester régulièrement ses pages grâce à des outils dédiés permet de gagner en qualité d'utilisabilité et de prévenir les dysfonctionnements.
 
 Entraîne-toi dès maintenant à appliquer ces préconisations dans tes projets web 😉. 
 
