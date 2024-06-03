@@ -285,6 +285,9 @@ Consulte cette ressource [Accessibility Skip links](https://www.w3schools.com/ac
 
 Cette fonctionnalité s'avère très utile pour accéder rapidement au contenu principal d'une page dans le cas d'une navigation au clavier et lorsqu'une barre de navigation comporte de nombreux liens.
 
+> **Tester la navigation au clavier**.  
+> L'extension [Taba11y](https://chromewebstore.google.com/detail/taba11y/aocppmckdocdjkphmofnklcjhdidgmga) pour Chrome permet de visualiser rapidement l'ordre des tabulations et de simuler la navigation au clavier sur une page.
+
 ## Conclusion
 
 Cet atelier touche à sa fin.  
