@@ -191,19 +191,18 @@ Revenons à présent sur les autres erreurs indiquées par l'extension **Wave**.
 >Encore une fois, il y a ici  plusieurs façons de traiter cette erreur.
 >   - Pour les avatars des membres de l'équipe, tu peux utiliser la technique du `aria-labelledby` vue précédemment en reliant les images aux titres `h3`. Tu peux aussi simplement renseigner une valeur appropriée dans l'attribut alt. Ce sera d'ailleurs une bonne pratique SEO.  
 >Par exemple :
->
->```html
+>    ```html
 >     <img src="images/team/eloisa-pintz.png" alt="Eloisa Pintz">
->```
->       [https://www.w3.org/WAI/WCAG22/Techniques/html/H37.html](https://www.w3.org/WAI/WCAG22/Techniques/html/H37.html)
+>    ```
+> [https://www.w3.org/WAI/WCAG22/Techniques/html/H37.html](https://www.w3.org/WAI/WCAG22/Techniques/html/H37.html)
 >   - Procède de même pour les images des articles, sauf si tu estimes que ces images ont un rôle uniquement décoratif, auquel cas il faut se contenter d'ajouter l'attribut `alt` mais de le laisser vide pour que ce contenu soit ignorer des assistants  d'écran.
 >       ```html
 >     <img src="images/posts/8byo_psa1_220426.jpg" alt="">
 >     <h3 id="article-1">Enjoy boats transports</h3>
 >       ```
 >       **À noter** : cette technique du `alt` vide doit être appliquée à toute image décorative appartenant au webdesign.
-> Dans tous les cas, il est primordial de rajouter cet attribut alt aux images, autrement c'est le chemin vers l'image qui sera lue par les > technologies d'assistance.
->       [https://www.w3.org/WAI/tutorials/images/decorative/](https://www.w3.org/WAI/tutorials/images/decorative/)
+> Dans tous les cas, il est primordial de rajouter cet attribut alt aux images, autrement c'est le chemin vers l'image qui sera lue par les technologies d'assistance.
+> [https://www.w3.org/WAI/tutorials/images/decorative/](https://www.w3.org/WAI/tutorials/images/decorative/)
 > - L'erreur *Missing form label* concerne le champ texte du formulaire de recherche auquel aucune étiquette n'est associée.  
 > **Associer un label à un champ de formulaire est primordial** pour l'ensemble des utilisateurs et l'emploi de l'attribut `placeholder` ne suffit pas, car il n'est pas pris en compte par les lecteurs d'écran. **Il faudrait donc ici ajouter un label**.  
 > Il y a cependant des cas d'usage où le webdesign ne prévoit pas de label. C'est le cas de ce mini formulaire de recherche. Comme expliqué sur ce tutoriel, [https://www.w3.org/WAI/tutorials/forms/labels/#using-aria-label](https://www.w3.org/WAI/tutorials/forms/labels/#using-aria-label), tu peux utiliser l'attribut `aria-label` puisque le champ est utilisé conjointement avec un bouton au texte explicite.
