@@ -6,7 +6,7 @@ Ce troisième volet « **accessibilité** » sera lui aussi entièrement consacr
 
 ## Objectifs
 
-Pour nous aider à concevoir des interfaces web accessibles, nous pouvons nous appuyer sur [le référentiel Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/fr) (se prononce WOU-CAG) mis en place par le consortium **W3C**.  Ce guide est largement pris en référence dans les réglementations de nombreux pays, dont la France sous le référentiel [RGAA (**R**éférentiel **g**énéral d'**a**mélioration de l'**a**ccessibilité)](https://accessibilite.numerique.gouv.fr/). Le principe est de définir les règles permettant aux personnes en situation de handicap d'avoir accès aux fonctionnalités d'une interface web à égalité avec tous les utilisateurs, que ce soit dans le cas de troubles visuels, moteurs, cognitifs, temporaires ou permanents.
+Pour nous aider à concevoir des interfaces web accessibles, nous pouvons nous appuyer sur [le référentiel Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/fr) (se prononce WOU-CAG) mis en place par le consortium **W3C**.  Ce guide est largement pris en référence dans les réglementations de nombreux pays, dont la France sous le référentiel [RGAA (**R**éférentiel **G**énéral d'**A**mélioration de l'**A**ccessibilité)](https://accessibilite.numerique.gouv.fr/). Le principe est de définir les règles permettant aux personnes en situation de handicap d'avoir accès aux fonctionnalités d'une interface web à égalité avec tous les utilisateurs, que ce soit dans le cas de troubles visuels, moteurs, cognitifs, temporaires ou permanents.
 
 
 **Les objectifs de cet atelier** :  
@@ -17,7 +17,7 @@ Pour nous aider à concevoir des interfaces web accessibles, nous pouvons nous a
 
 ## Démarrage
 
-Commence par cloner ce dépôt grâce au lien ci-dessus ⬆ <a href="#input-clone"><i class="bi bi-code-slash"></i>&nbsp;Code</a>. Tu peux aussi télécharger le dossier zippé en suivant le lien vers **GitHub** si tu n'utilises pas Git.  
+<a href="#input-clone">Commence par cloner ce dépôt grâce au lien ci-dessus ⬆ <i class="bi bi-code-slash"></i></a>. Tu peux aussi télécharger le dossier zippé en suivant le lien vers **GitHub** si tu n'utilises pas Git.  
 Ouvre ensuite le dossier du projet avec ton **IDE** puis accède au fichier `index.html` avec ton navigateur.
 
 Dans cet atelier, nous travaillerons uniquement sur cette page d'accueil composée d'une barre de navigation, d'un mini formulaire de recherche et de plusieurs sections présentant du faux contenu.  
@@ -189,11 +189,12 @@ Revenons à présent sur les autres erreurs indiquées par l'extension **Wave**.
 ><summary>Solutions</summary>
 >- L'erreur *Missing alternative text* concerne sept images.  
 >Encore une fois, il y a ici  plusieurs façons de traiter cette erreur.
->   - Pour les avatars des membres de l'équipe, tu peux utiliser la technique du `aria-labelledby` vue précédemment en reliant les images aux titres `<h3>`. Tu peux aussi simplement renseigner une valeur appropriée dans l'attribut alt. Ce sera d'ailleurs une bonne pratique SEO.  
+>   - Pour les avatars des membres de l'équipe, tu peux utiliser la technique du `aria-labelledby` vue précédemment en reliant les images aux titres `h3`. Tu peux aussi simplement renseigner une valeur appropriée dans l'attribut alt. Ce sera d'ailleurs une bonne pratique SEO.  
 >Par exemple :
->       ```html
+>
+>```html
 >     <img src="images/team/eloisa-pintz.png" alt="Eloisa Pintz">
->       ```
+>```
 >       [https://www.w3.org/WAI/WCAG22/Techniques/html/H37.html](https://www.w3.org/WAI/WCAG22/Techniques/html/H37.html)
 >   - Procède de même pour les images des articles, sauf si tu estimes que ces images ont un rôle uniquement décoratif, auquel cas il faut se contenter d'ajouter l'attribut `alt` mais de le laisser vide pour que ce contenu soit ignorer des assistants  d'écran.
 >       ```html
