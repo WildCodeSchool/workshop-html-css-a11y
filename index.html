@@ -15,19 +15,20 @@
 </head>
 
 <body>
-    <nav>
-        <a href="#">Workshop A11Y</a>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">The team</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-
-    </nav>
-    <main>
+    <header role="banner">
+        <nav role="navigation">
+            <a href="#">Workshop A11Y</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">The team</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main">
         <hgroup>
             <h1>Welcome here</h1>
             <p>
@@ -35,7 +36,7 @@
                 <br />
                 Non labore quam porro magnam recusandae fugiat.
             </p>
-            <search>
+            <search role="search">
                 <form action="">
                     <input type="search" name="search" placeholder="enter your search">
                     <button type="submit">Search</button>
@@ -67,7 +68,7 @@
        
         <section class="featured-posts">
             <hgroup>
-                <h2>Featured posts</h2>
+                <h3>Featured posts</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla explicabo, tempora velit eius quo,
                     exercitationem, cumque expedita neque qui rerum fugiat quod maiores quas corrupti fuga quibusdam
                     aspernatur ipsam ab.</p>
@@ -118,7 +119,7 @@
             </p>
         </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
         © 2024 Wild Code School | Credits <a href="https://www.freepik.com/free-vector/sunny-egyptian-pyramids-oasis-scene_153696746.htm#fromView=search&page=1&position=43&uuid=849090c3-8aa7-48c7-aa12-bc5bd7d3585a" target="_blank">Image by brgfx</a> on Freepik  | <a href="#">Contact</a>
     </footer>
 </body>
